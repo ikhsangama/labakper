@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TrAdmin extends Migration
+class TmDosen extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class TrAdmin extends Migration
      */
     public function up()
     {
-        Schema::create('tr_admin', function (Blueprint $table) {
-            $table->increments('idin_admin');
+        Schema::create('tm_dosen', function (Blueprint $table) {
+            $table->increments('idin_dosen');
             $table->integer('id_pengguna');
-            $table->string('nama_admin');
+            $table->string('nip');
+            $table->string('nama_dosen');
+            $table->string('foto_dosen');
+            $table->string('no_hp');
+            $table->string('email');
 
             $table->timestamps();
         });
@@ -29,6 +33,6 @@ class TrAdmin extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tr_admin');
+        Schema::dropIfExists('tm_dosen');
     }
 }

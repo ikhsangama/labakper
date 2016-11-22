@@ -19,7 +19,7 @@ class TmDosen extends Migration
             $table->string('nip');
             $table->string('nama_dosen');
             $table->string('foto_dosen');
-            $table->string('no_hp');
+            $table->integer('no_hp');
             $table->string('email');
 
             $table->timestamps();
